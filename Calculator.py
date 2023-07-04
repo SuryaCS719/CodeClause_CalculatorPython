@@ -21,20 +21,16 @@ print("4. Division")
 print("5. Perform All Operations")
 print("6. Exit Program")
 
-num1 = 0
-num2 = 0
-
 while True:
     choice = input("Enter your choice (1-6): ")
 
-    if choice in ('1', '2', '3', '4', '5', '6'):
-        if choice == '6':
-            print("Exiting the program.")
-            break
+    if choice == '6':
+        print("Exiting the program.")
+        break
 
-        if choice != '5':
-            num1 = float(input("Enter the first number: "))
-            num2 = float(input("Enter the second number: "))
+    if choice in ('1', '2', '3', '4', '5'):
+        num1 = float(input("Enter the first number: "))
+        num2 = float(input("Enter the second number: "))
 
         if choice == '1':
             print(num1, "+", num2, "=", add(num1, num2))
@@ -44,7 +40,7 @@ while True:
             print(num1, "*", num2, "=", multiply(num1, num2))
         elif choice == '4':
             print(num1, "/", num2, "=", divide(num1, num2))
-        else:
+        elif choice == '5':
             print(num1, "+", num2, "=", add(num1, num2))
             print(num1, "-", num2, "=", subtract(num1, num2))
             print(num1, "*", num2, "=", multiply(num1, num2))
